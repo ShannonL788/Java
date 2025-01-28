@@ -10,7 +10,7 @@ The program sorts the words such that words with the lowest Scrabble score comin
 - If two words have the same Scrabble score, they are sorted alphabetically.
 - The program supports case-insensitive sorting.
 
-### Example Input
+### Sample Input
   
 4<br>
 pear<br>
@@ -18,7 +18,7 @@ apple<br>
 banana<br>
 grape<br>
 
-### Example Output
+### Sample Output
 
 pear: 6 points<br>
 banana: 8 points<br>
