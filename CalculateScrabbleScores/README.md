@@ -1,7 +1,7 @@
 # Calculate Scrabble Scores
 
 Given an array of Strings, the goal is to sort the words based on their Scrabble scores. Scrabble scores are calculated by summing up the points for each letter in the word based on the standard Scrabble letter values.
-The program sorts the words such that words with the lowest Scrabble score come first. If two words have the same score, they are sorted alphabetically.
+The program sorts the words such that words with the lowest Scrabble score coming first. If two words have the same score, they are sorted alphabetically.
 
 ## Features
   
