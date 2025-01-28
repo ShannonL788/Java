@@ -12,15 +12,15 @@ The program sorts the words such that words with the lowest Scrabble score come 
 
 ### Example Input
   
-4
-pear
-apple
-banana
-grape
+4<br>
+pear<br>
+apple<br>
+banana<br>
+grape<br>
 
 ### Example Output
 
-pear: 6 points
-banana: 8 points
-grape: 8 points
-apple: 9 points
+pear: 6 points<br>
+banana: 8 points<br>
+grape: 8 points<br>
+apple: 9 points<br>
