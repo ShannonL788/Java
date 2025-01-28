@@ -9,6 +9,6 @@ We use a Monte Carlo simulation to estimate the percentage probability of winnin
 - Runs the simulation a number of times (default: 10,000).
 - Outputs the probability of success as a percentage.
 
-### Example Output
+### Sample Output
 
 22%
