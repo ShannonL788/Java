@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class HexToRomanNum {
+    public static void main(String [] args) {
+        Scanner scan = new Scanner(System.in);
+
+        // Prompt the user to enter a hexadecimal string
+        System.out.print("Enter the Hex String: ");
+        String hex = scan.nextLine();
+
+        // Convert the hexadecimal string to a Roman numeral
+        String roman = getRoman(hex);
+
+        // Output the Roman numeral 
+        System.out.println(roman);
+
+        scan.close();
+    }
+
+    public static String getRoman(String hex) {
+        // String to build the Roman numeral
+        String roman = "";
+
+        // Array of numbers corresponding to Roman numerals
+        int[] nums = {1000, 500, 100, 50, 10, 5, 1};
+        
+        // Array of Roman numeral symbols
+        String[] romans = {"M", "D", "C", "L", "X", "V", "I"};
+
+        // String containing all hex digits in order
+        String hexChar = "0123456789ABCDEF";
+
+        // Variable to store the decimal value of the hex input
+        int decimal = 0;
+
+        // Convert hex to decimal
+        for (int i = 0; i < hex.length(); i++) {
+            char ch = hex.charAt(i);
+            int num = hexChar.indexOf(ch); // Find the decimal value of the hex character
+            decimal = 16 * decimal + num; // Multiply by 16 (hex base) and add the current digit
+        }
+
+        // Convert decimal to Roman numeral
+        for (int i = 0; i < nums.length; i++) {
+            while (decimal >= nums[i]) {
+                roman += romans[i]; // Append the Roman numeral symbol
+                decimal -= nums[i]; // Decrease the decimal value by the numeral's value
+            }
+        }
+
+        // Return the Roman numeral
+        return roman;
+    }
+}
