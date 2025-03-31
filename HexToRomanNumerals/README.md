@@ -4,10 +4,9 @@ This Java program converts hexadecimal numbers into their corresponding Roman nu
 
 ## Features
   
-- Accepts a hexadecimal string input via the console.
+- Accepts a hexadecimal string input.
 - Converts the hexadecimal string to an integer.
 - Transforms the integer value into its Roman numeral equivalent.
-- Supports hexadecimal inputs consisting of digits and the letters A-F (case-insensitive)
 
 ### Sample Input
   
