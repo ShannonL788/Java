@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class numbersWithCommas {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        // Prompt user to input an integer
+        int num = scan.nextInt();
+
+        // Print the number formatted with commas
+        System.out.println(commaNumbers(num));
+
+        scan.close();
+    }
+
+    /**
+     * Converts an integer to a comma-separated string format.
+     * @param num The integer to be converted.
+     * @return A string representing the integer with comma separators.
+     */
+
+    public static String commaNumbers(int num) {
+        // Convert the integer to a string
+        String stringNum = String.valueOf(num);
+        
+        // Empty string to build the comma-separated number
+        String commaNum = "";
+
+        // Counter to track every three digits
+        int count = 0;
+
+        // Loop through each digit in the number from right to left
+        for (int i = stringNum.length() - 1; i >= 0; i--) {
+            // Add the current digit to the start of commaNum
+            commaNum = stringNum.charAt(i) + commaNum;
+            
+            // Increment the digit counter
+            count++;
+
+            // Every three digits, add a comma to commaNum
+            if (count % 3 == 0 && i != 0) { // Avoid placing a comma at the start of the number
+                commaNum = "," + commaNum;
+            }
+        }
+        return commaNum;
+    }
+}
