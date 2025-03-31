@@ -10,8 +10,9 @@ This Java program reads two strings from the user and calculates the difference 
 
 ### Sample Input
   
-100000
+ireland <br>
+IRELAND
 
 ### Sample Output
 
-100,000
+224
