@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class AsciiDifference {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        // Read two strings from the user
+        String s1 = scan.nextLine();
+        String s2 = scan.nextLine();
+
+        // Calculate and print the difference in ASCII values of the two strings
+        System.out.println(difference(s1, s2));
+
+        scan.close();
+    }
+
+    /**
+     * Calculates the difference in total ASCII values between two strings.
+     * @param s1 The first string.
+     * @param s2 The second string.
+     * @return The difference in ASCII values between s1 and s2.
+     */
+  
+    public static int difference(String s1, String s2) {
+        return getAscii(s1) - getAscii(s2);
+    }
+
+    /**
+     * Computes the total ASCII value of a string.
+     * @param s The string whose ASCII value is to be computed.
+     * @return The total ASCII value of the string.
+     */
+  
+    public static int getAscii(String s) {
+        int ascii = 0;
+
+        // Iterate over each character in the string
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            ascii += (int) ch; // Add ASCII value of the character to the total
+        }
+        return ascii;
+    }
+}
