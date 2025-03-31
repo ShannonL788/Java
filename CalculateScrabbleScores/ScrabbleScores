@@ -16,11 +16,17 @@ public class ScrabbleScores {
     		points[i] = calculateScores(words[i]);
     	}
     	
-    	sortWords(points, words); // call method to sort arrays
+    	sortWords(points, words); // Call method to sort arrays
     	
         scan.close();
     }
 
+    /**
+     * Calculates the Scrabble score for a given word.
+     * @param word The word for which to calculate the score.
+     * @return The Scrabble score of the word.
+     */
+        
     public static int calculateScores(String word) {
     	word = word.toUpperCase(); // Allows for case-insensitive comparison
     	int points = 0;
@@ -52,7 +58,13 @@ public class ScrabbleScores {
     	}
     	return points;
     }
-    
+
+    /**
+     * Sorts words and their scores using bubble sort.
+     * @param points Array of scores corresponding to the words.
+     * @param words Array of words to be sorted along with their scores.
+     */
+
     public static void sortWords(int [] points, String [] words) {
     	boolean swapped;
         do {
